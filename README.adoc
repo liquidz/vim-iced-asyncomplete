@@ -26,16 +26,6 @@ Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'liquidz/vim-iced-asyncomplete', {'for': 'clojure'}
 ----
 
-=== Usage
-
------
-au User asyncomplete_setup call asyncomplete#register_source({
-    \ 'name': 'vim-iced',
-    \ 'whitelist': ['clojure'],
-    \ 'completor': function('iced#asyncomplete#complete'),
-    \ })
------
-
 == License
 
 Copyright (c) 2019 http://twitter.com/uochan[Masashi Iizuka].
