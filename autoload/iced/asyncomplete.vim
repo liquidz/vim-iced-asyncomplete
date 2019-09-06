@@ -7,6 +7,7 @@ function! iced#asyncomplete#complete(opt, ctx) abort
   let startcol = a:ctx['col'] - kwlen
 
   if kwlen == 0
+        \ || (kw[0] ==# ':' && kwlen < 2)
     call asyncomplete#complete(a:opt['name'], a:ctx, startcol, [])
   else
     call iced#complete#candidates(
